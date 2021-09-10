@@ -1,0 +1,16 @@
+<section class="featured-blog mtb-40">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor='let b of dis'>
+        <div class="blog-box">
+          <img src="http://127.0.0.1:8000/upload/{{b.image}}" alt="blog1" style="width: 300px; height: 200px;" />
+          <h3>{{b.title}}</h3>
+          <p>by <span>{{b.author_name}}</span> on <span>{{b.created_at | date}}</span></p>
+          <p>{{b.description}} </p>
+          <a [routerLink]="['/blogdetail', b.id]" class="btn btn-danger">Read more...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
